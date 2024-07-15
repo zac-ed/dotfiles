@@ -1,0 +1,24 @@
+{
+  pyright.enable: true,
+  python.analysis.diagnosticMode: openFilesOnly,
+  python.analysis.diagnosticSeverityOverrides: {
+    reportGeneralTypeIssues: warning,
+    reportOptionalMemberAccess: information,
+    reportOptionalSubscript: information,
+    reportOptionalCall: information,
+    reportPrivateUsage: information,
+    reportUnnecessaryIsInstance: information,
+    reportUnnecessaryTypeIgnoreComment: information
+  },
+  pyright.disableDiagnostics: false,
+  pyright.disableCompletion: false,
+  pyright.disableDocumentation: false,
+  pyright.disableProgressNotifications: true,
+  pyright.completion.importSupport: true,
+  pyright.completion.snippetSupport: true,
+  pyright.organizeimports.provider: pyright,
+  pyright.inlayHints.functionReturnTypes: false,
+  pyright.inlayHints.variableTypes: false,
+  pyright.inlayHints.parameterTypes: false
+}
+

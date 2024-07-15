@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mv ~/.config/qtile/config2.py ~/.config/qtile/config2.bak
+mv ~/.config/qtile/config.py ~/.config/qtile/config2.py
+mv ~/.config/qtile/config2.bak ~/.config/qtile/config.py
+
+mv ~/.config/picom.bak ~/.config/picom
+mv ~/.config/picom.conf ~/.config/picom.bak
+mv ~/.config/picom ~/.config/picom.conf
+
+./.local/bin/reload_config.py

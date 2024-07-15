@@ -1,0 +1,92 @@
+/****************************************************************************
+ * |zac-ed custom|   		Thanks to LR-tech for the template!          
+ * |    theme  	 | Source: https://github.com/lr-tech/rofi-themes-collection
+ ****************************************************************************/
+
+* {
+font:   "agave Nerd Font Mono 20";
+
+    bg0:    #11091a;
+    bg1:    #781155;
+    bg2:    #781155;
+
+    fg0:    #752d5c;
+    fg1:    #ab90a1;
+    fg2:    #655178;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0;
+    padding:    0;
+    spacing:    0;
+}
+
+window {
+    background-color:   @bg0;
+
+    location:       center;
+    width:          640;
+    border-radius:  0;
+}
+
+inputbar {
+    font:       "agave Nerd Font Mono 20";
+    padding:    12px;
+    spacing:    12px;
+    children:   [ entry ];
+}
+
+entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+entry {
+    font:   inherit;
+
+    placeholder         : "...";
+    placeholder-color   : @fg1;
+}
+
+message {
+    border:             2px 0 0;
+    border-color:       @bg1;
+    background-color:   @bg1;
+}
+
+textbox {
+    padding:    8px 24px;
+}
+
+listview {
+    lines:      10;
+    columns:    1;
+
+    fixed-height:   false;
+    border:         0px 0 0;
+    border-color:   @bg1;
+}
+
+element {
+    padding:            8px 16px;
+    spacing:            16px;
+    background-color:   #11091a;
+}
+
+element normal active {
+    text-color: @fg1;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg1;
+    text-color:         @fg1;
+}
+
+
+element-icon {
+    size:   1em;
+}
+
+element-text {
+    text-color: inherit;
+}

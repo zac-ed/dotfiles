@@ -1,0 +1,78 @@
+--	 Keybinds	 --
+-- 			 --
+--    Leader key is " "	 --
+-- 			 --
+-- /  for (un)comments	 --
+-- z open directory tree --
+-- f   fuzzy finder	 --
+-- x    test file	 --
+-- t  open terminal 	 --
+-- p toggle paste mode	 --
+-- s save current buffer --
+
+
+local vim = vim
+local execute = vim.api.nvim_command
+local fn = vim.fn
+
+
+-- line numbers
+vim.wo.number = true
+
+-- leader key == " "
+vim.g.mapleader = " "
+
+-- syntax highlighting
+vim.cmd('syntax enable')
+
+-- auto-indentation
+vim.cmd('filetype plugin indent on')
+
+-- Highlight current line
+vim.wo.cursorline = true
+
+-- Highlight matching parentheses
+vim.cmd('set showmatch')
+
+-- line wrapping
+vim.wo.wrap = true
+
+-- smart case sensitivity
+vim.cmd('set smartcase')
+
+-- incremental search
+vim.cmd('set incsearch')
+
+-- persistent undo
+vim.cmd('set undofile')
+
+-- auto-save per 10s
+vim.o.updatetime = 10000
+
+-- install packer.nvim 
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+    vim.api.nvim_command('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
+end
+
+require('packer').startup(function(use)
+  use {'wbthomason/packer.nvim', opt = true}
+  use {'nvim-treesitter/nvim-treesitter'} 
+
+  -- Other nice plugins
+  use {'junegunn/fzf', run = './install --all'} -- Fuzzy finder
+  use {'preservim/nerdtree'}  	 		-- File explorer
+end)
+
+
+-- Open NERDTree
+vim.api.nvim_set_keymap('n', '<Leader>z', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
+
+-- Open Terminal
+vim.api.nvim_set_keymap('n', '<leader>t', ':terminal<CR>', {noremap = true, silent = true})
+
+-- Open FZF fuzzy finder
+vim.api.nvim_set_keymap('n', '<Leader>f', ':FZF<CR>', {noremap = true, silent = true})
+
+-- Save current buffer
+vim.api.nvim_set_keymap('n', '<Leader>s', ':w<CR>', {noremap = true, silent = true})

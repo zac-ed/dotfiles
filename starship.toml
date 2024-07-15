@@ -1,0 +1,35 @@
+format = """
+$time\
+[ ](fg:#e552db bg:#00000000)\
+$git_branch\
+[](bg:#00000000 fg:#6a8dca)\
+$directory\
+[](fg:#e552db bg:#00000000)\
+$git_status\
+[ ](fg:#6a8dca bg:#00000000)\
+"""
+command_timeout = 5000
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+[directory]
+style = "bg:#00000000 fg:#dbdde2"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = ""
+style = "bg:#00000000"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#00000000"
+format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+style = ''
+format = '  [$time]($style) '
+time_format = '%H:%M'
+use_12hr = false  
+utc_time_offset = 'local'
+time_range = '-'

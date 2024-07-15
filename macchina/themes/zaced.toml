@@ -1,0 +1,34 @@
+spacing   = 1 
+padding   = 0
+separator = " "
+hide_ascii = true
+
+[custom_ascii]
+path  = "~/.config/macchina/ascii/e"
+color = "Blue"
+
+[randomize]
+key_color       = true
+separator_color = false
+
+[palette]
+type = "Full" 
+glyph = "  ."
+visible = true
+
+[bar]
+glyph           = ""
+symbol_open     = "("
+symbol_close    = ")"
+hide_delimiters = true
+visible         = true
+
+[box]
+border          = "double"
+visible         = true
+
+[keys]
+kernel = " "
+uptime = " "
+cpu_load = " "
+memory = " "

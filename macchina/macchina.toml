@@ -1,0 +1,2 @@
+theme = "zaced"
+show = ["Kernel", "Uptime", "ProcessorLoad", "Memory"]
