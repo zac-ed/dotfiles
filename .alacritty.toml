@@ -1,0 +1,42 @@
+[colors.primary]
+background='0x120a22'
+foreground='0x6d477b'
+
+[colors.normal]
+black=  '0x5b5955'
+red=    '0xc43a6e'
+green=  '0x559a6a'
+yellow= '0x9b8a4b'
+blue=   '0x6a8dca'
+magenta='0x9e2a95'
+cyan=   '0x479198'
+white=  '0xdbdde2'
+
+[colors.bright]
+black=  '0x707277'
+red=    '0xf65199'
+green=  '0x82c896'
+yellow= '0xcab775'
+blue=   '0x98bbfb'
+magenta='0xe552db'
+cyan=   '0x91cfd6'
+white=  '0xf7f9ff'
+
+[font]
+size = 19
+
+[font.bold]
+family = "agave Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "agave Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "agave Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "agave Nerd Font Mono"
+style = "Regular"
